@@ -1,5 +1,5 @@
 compile:
-	avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega32u4 -c -o generator.o generator.c
+	avr-gcc -Wall -Os -DF_CPU=16000000UL -mmcu=atmega32u4 -c -o generator.o generator.c
 	avr-gcc -mmcu=atmega32u4 generator.o -o generator
 	avr-objcopy -O ihex -R .eeprom generator generator.hex
 	
