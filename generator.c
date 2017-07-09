@@ -20,7 +20,7 @@ void main(){
 void setup(){
 	//šeit mēs rakstam dažādus bitus kontroles reģistros. io.h satur aliasus reģistriem un varam nerakstīt *ADRESE |= (1<<7)
 	DDRB |= (1 << PINB7); //PINB7 ir outputs
-	OCR0A =64; //skaitam 64 tikšķus (250khz)
+	OCR0A =63; //skaitam 64 tikšķus (250khz)
 	TCCR0A |= (1 << COM0A0); //setupojam, ka OC0A pins (PINB7) pārslēdzas katru reizi, kad ir compare match taimerim.
 	TCCR0A |= (1 << WGM01); //Clear on compare match - noreseto taimeri un sāk skaitīt no sākuma
 	TCCR0B |= (1 << WGM02); //waveform generation mode
